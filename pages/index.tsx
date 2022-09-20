@@ -13,6 +13,7 @@ import {
 import Footer from "../components/Footer";
 import Navbar from "../components/Navbar";
 import styles from "../styles/index.module.css";
+import { motion } from "framer-motion";
 
 export default function Home() {
   return (
@@ -40,7 +41,14 @@ export default function Home() {
 
         <Container className="d-md-flex justify-content-between">
           <div className="w-50">
-            <h1 className="display-1 text-primary mt-5">Blog.io</h1>
+            <motion.h1
+              className="display-1 text-primary mt-5"
+              initial={{ x: "-100vw", opacity: 0 }}
+              animate={{ x: 0, opacity: 1 }}
+              transition={{ duration: 0.5 }}
+            >
+              Blog.io
+            </motion.h1>
             <h2 className="text-secondary mb-5">Record your thoughts</h2>
             <p className="mb-5">
               Lorem, ipsum dolor sit amet consectetur adipisicing elit. Tempore
